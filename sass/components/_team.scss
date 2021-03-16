@@ -1,0 +1,94 @@
+.team {
+  padding-top: 94px;
+  padding-bottom: 94px;
+  background-color: var(--light-grey);
+
+  &__container {
+    display: flex;
+    justify-content: space-between;
+    @include container;
+    align-items: inherit;
+  }
+  
+  &__title {
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 42px;
+    text-align: center;
+    height: 42px;
+    letter-spacing: 0.03em;;
+  }
+}
+
+
+.teammate {
+  display: flex;
+  flex-direction: column;
+  background-color: var(--white);
+  width: 270px;
+  margin-top: 50px;
+  padding-bottom: 30px;
+  border-radius: 0px 0px 4px 4px;
+  box-shadow: 0px 2px 1px 0px rgba(0, 0, 0, 0.2), 0px 1px 1px 0px rgba(0, 0, 0, 0.14), 0px 1px 3px 0px rgba(0, 0, 0, 0.12);
+
+  &__name {
+    font-weight: 500;
+    font-size: 16px;
+    text-align: center;
+    margin-top: 30px;
+    line-height: 19px;
+    letter-spacing: 0.03em;;
+  }
+  
+  &__profession {
+    display: block;
+    color: var(--grey);
+    font-weight: 400;
+    font-size: 16px;
+    text-align: center;
+    margin-top: 10px;
+    line-height: 19px;
+    letter-spacing: 0.03em;;
+  }
+
+  &__links {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 12px;
+
+  }
+  
+  & .item + .item {
+    margin-left: 10px;
+  }
+
+  &__sociallink {
+    height: 44px;
+    width: 44px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;  
+    align-items: center;
+    fill: var(--grey);
+    transition: background-color var(--animtrans), fill var(--animtrans);
+
+    &:hover {
+      background-color: var(--blue);
+      fill: var(--white);
+      cursor: pointer;
+      transition: background-color var(--animtrans), fill var(--animtrans);
+    }
+  }
+  
+  &__icon {
+    height: 20px;
+    width: 20px;
+
+    &:hover,
+    &:focus {
+      fill: inherit;
+    }
+  }
+}

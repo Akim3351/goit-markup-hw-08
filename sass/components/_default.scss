@@ -1,0 +1,50 @@
+html {
+  box-sizing: border-box;
+}
+  
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+  
+* {
+  padding: 0;
+  margin: 0;
+  max-width: 1600px;
+  box-sizing: border-box;
+  line-height: 1.15;
+  letter-spacing: 0.03px;
+  font-family: "Roboto", sans-serif;
+}
+  
+body {
+  overflow-x: hidden;
+}
+  
+.link {
+  position: relative;
+  display: flex;
+  height: 80px;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 1.214;
+  letter-spacing: 0.02em;
+  align-items: center;
+}
+  
+.link:link,
+.link:visited {
+  color: currentColor;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 17px;
+  transition: color var(--animtrans);
+}
+
+.link:hover,
+.link:focus {
+  color: var(--blue);
+  transition: color var(--animtrans);
+}
+

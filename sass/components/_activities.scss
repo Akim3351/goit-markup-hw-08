@@ -1,0 +1,54 @@
+.activities {
+
+  &__container {
+    display: inherit;
+    @include container;
+    align-items: inherit;
+  }
+
+  &__title {
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 42px;   
+    text-align: center;
+    height: 42px;
+  }
+
+  &__list {
+    margin-top: 50px;
+    margin-bottom: 94px;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__thumb {
+    @include thumb
+  }
+
+  &__thumbmobile {
+    @include thumb
+  }
+
+  &__thumbdesign {
+    @include thumb
+  }
+
+  &__image {
+    @include image;
+  }
+
+  &__overlay {
+    position: absolute;
+    width: 100%;
+    bottom: 0;
+    padding-top: 27px;
+    padding-bottom: 27px;
+    text-align: center;
+    background-color: var(--grey-op80);
+    color: var(--white);
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 1.17;
+    text-transform: uppercase;
+  }
+}

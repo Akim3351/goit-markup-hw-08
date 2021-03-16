@@ -1,0 +1,222 @@
+.backdrop {
+  position: fixed;
+  display: flex;
+  align-items: center;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(168, 118, 118, 0.2);
+  opacity: 1;
+  transition: opacity var(--animtrans);
+
+  &.is-hidden {
+    opacity: 0;
+    pointer-events: none;
+    display: flex;
+    align-items: center;
+    transition: opacity var(--animtrans);
+  
+    & .modal {
+      transform: translate(-50%, -50%) scale(1.5);
+      transition: transform var(--animtrans);
+    }
+  }
+}
+
+
+.modal {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  min-height: 581px;
+  min-width: 528px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(1);
+  padding: 8px;
+  background-color: var(--white);
+  transition: transform var(--animtrans);
+
+  &__closebutton {
+    width: 30px;
+    height: 30px;
+    margin: 8px 8px 0 auto;
+    border: 1px solid var(--black-op10);
+    border-radius: 50%;
+    background-color: var(--white);
+    transition: color var(--animtrans);
+    outline: none;
+
+    &:hover,
+    &:focus {
+      color: var(--blue);
+      cursor: pointer;
+      transition: color var(--animtrans);
+    }
+  }
+
+  &__closeicon {
+    height: 11px;
+    width: 11px;
+    fill: currentColor;
+  }
+
+  &__formwrapper {
+    display: flex;
+    flex-direction: column;
+    margin: 0 40px 20px 40px;
+  }
+  
+  &__header {
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 1.15;
+    text-align: center;
+    color: var(--black);
+    margin-bottom: 12px;
+  }
+  
+  &__form {
+    display: inherit;
+    flex-direction: inherit;
+
+    & > label {
+      font-size: 12px;
+      font-weight: 400;
+      line-height: 1.166;
+      text-align: left;
+      color: var(--grey);
+      margin-top: 10px;
+    }
+  }
+  
+  &__input {
+    position: relative;
+    margin-top: 4px;
+  }
+  
+  &__inputicon {
+    position: absolute;
+    left: 0;
+    width: auto;
+    margin-left: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    text-align: left;
+    fill: currentColor;
+    transition: fill var(--animtrans);
+  }
+
+  &__input > input {
+    width: 100%;
+    height: 40px;
+    padding-left: 35px;
+    border: solid 1px var(--black-op20);
+    border-radius: 4px;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 1.166;
+    letter-spacing: 0.01em;
+    text-align: left;
+    outline: none;
+
+    & > input:focus,
+    & > input:hover,
+    & > input:active {
+      border-color: var(--blue);
+      cursor: pointer;
+      transition: border-color var(--animtrans);
+    }
+
+    &:hover .modal__inputicon,
+    &:focus .modal__inputicon,
+    &:focus-within .modal__inputicon {
+      fill: var(--blue);
+      transition: fill var(--animtrans);
+    }
+
+  }
+
+  &__form > textarea {
+    width: 100%;
+    border: solid 1px var(--black-op20);
+    border-radius: 4px;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 1.166;
+    letter-spacing: 0.01em;
+    text-align: left;
+    outline: none;
+  
+    & > textarea:focus,
+    & > textarea:active,
+    & > textarea:hover {
+      border-color: var(--blue);
+      cursor: pointer;
+      transition: border-color var(--animtrans);
+    }
+  }
+
+  &__textarea {
+    resize: none;
+    width: 100%;
+    height: 120px;
+    padding: 12px 16px 12px 16px;
+  }
+  
+  &__policycheck {
+    display: flex;
+    vertical-align: baseline;
+    margin: 20px auto 0 auto;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 1.714;
+    text-align: left;
+    color: var(--grey);
+  }
+  
+  &__policycheckinput {
+    margin-right: 9px;
+    width: 16px;
+    height: 15px;
+
+    &:focus,
+    &:hover,
+    &:active {
+      border-color: var(--blue);
+      cursor: pointer;
+      transition: border-color var(--animtrans);
+    }
+  }
+    
+  &__link {
+    color: var(--blue);
+    text-decoration: underline;
+  }
+
+  &__submitbtn {
+    box-sizing: border-box;  
+    width: 200px;
+    height: 50px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 30px;
+    border: none;
+    vertical-align: baseline;
+    border-radius: 4px;
+    background-color: var(--blue);
+    color: var(--white);
+    font-weight: 700;
+    font-size: 16px;
+  
+    &:hover,
+    &:focus {
+      cursor: pointer;
+    }
+  
+  }
+  
+}
