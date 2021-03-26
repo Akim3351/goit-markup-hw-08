@@ -127,20 +127,21 @@
     text-align: left;
     outline: none;
 
-    & > input:focus,
-    & > input:hover,
-    & > input:active {
+    &:focus,
+    &:hover,
+    &:active {
       border-color: var(--blue);
       cursor: pointer;
       transition: border-color var(--animtrans);
     }
+  }
 
-    &:hover .modal__inputicon,
-    &:focus .modal__inputicon,
-    &:focus-within .modal__inputicon {
-      fill: var(--blue);
-      transition: fill var(--animtrans);
-    }
+  .modal__input:hover .modal__inputicon,
+  .modal__input:focus .modal__inputicon,
+  .modal__input:focus-within .modal__inputicon {
+    fill: var(--blue);
+    cursor: pointer;
+    transition: fill var(--animtrans);
   }
 
   &__form > textarea {
@@ -154,9 +155,9 @@
     text-align: left;
     outline: none;
 
-    & > textarea:focus,
-    & > textarea:active,
-    & > textarea:hover {
+    &:focus,
+    &:active,
+    &:hover {
       border-color: var(--blue);
       cursor: pointer;
       transition: border-color var(--animtrans);
@@ -185,10 +186,12 @@
     margin-right: 8px;
     width: 16px;
     height: 15px;
+    outline: none;
 
     &:focus,
     &:hover,
     &:active {
+      color: var(--blue);
       border-color: var(--blue);
       cursor: pointer;
       transition: border-color var(--animtrans);
