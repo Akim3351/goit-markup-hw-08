@@ -1,12 +1,24 @@
 .product {
-  width: 370px;
+  width: 450px;
   padding-left: 0px;
   list-style-position: inside;
   border: 1px solid;
   border-color: var(--light-grey);
-  flex-basis: calc(100% / 3 - var(--card-set-gap));
-  margin-left: var(--card-set-gap);
-  margin-top: var(--card-set-gap);
+  margin-bottom: 30px;
+
+  @media (min-width: 768px) and (max-width: 1199px) {
+    width: 354px;
+    height: 440px;
+    margin: 0 15px 30px 15px;
+  }
+
+  @media (min-width: 1200px) {
+    width: 370px;
+    height: 404px;
+    flex-basis: calc(100% / 3 - var(--card-set-gap));
+    margin-left: var(--card-set-gap);
+    margin-top: var(--card-set-gap);
+  }
 
   &:hover,
   &:focus {
@@ -15,19 +27,36 @@
 
     & .product__thumboverlay,
     & .product__thumboverlay {
-    transform: translateY(0);
-    transition: transform var(--animtrans);
+      transform: translateY(0);
+      transition: transform var(--animtrans);
     }
   }
 
   &__thumb {
     position: relative;
     box-sizing: border-box;
-    border: none;  
+    border: none;
+    width: 450px;
     height: 294px;
+    object-fit: cover;
+    object-position: center;
     overflow: hidden;
+
+    @media (min-width: 768px) and (max-width: 1199px) {
+      width: 354px;
+      height: 294px;
+      object-fit: cover;
+      object-position: center;
+    }
+
+    @media (min-width: 1200px) {
+      width: 370px;
+      height: 294px;
+      object-fit: cover;
+      object-position: center;
+    }
   }
-  
+
   &__image {
     position: absolute;
     top: 0;
@@ -38,7 +67,7 @@
     height: 100%;
     object-fit: cover;
   }
-  
+
   &__thumboverlay {
     position: absolute;
     top: 0;
@@ -50,14 +79,14 @@
     transform: translateY(500%);
     transition: transform var(--animtrans);
   }
-  
+
   &__text {
     color: var(--white);
     font-weight: 400;
     font-size: 18px;
     line-height: 1.55;
   }
-  
+
   &__name {
     margin-top: 20px;
     margin-left: 24px;
@@ -69,7 +98,7 @@
     letter-spacing: 0.06em;
     text-align: left;
   }
-  
+
   &__type {
     margin-left: 24px;
     margin-right: 24px;

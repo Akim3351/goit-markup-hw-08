@@ -12,42 +12,63 @@
     letter-spacing: 0.03em;
     margin-bottom: 50px;
   }
-  
+
   &__container {
     display: flex;
     justify-content: space-between;
     @include container;
     align-items: inherit;
   }
-  
+
   &__list {
     list-style: none;
     display: flex;
-    align-items: center;
-    justify-content: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 450px;
     margin-top: 12px;
-  
-    & .item + .item {
-      margin-left: 30px;
+    justify-content: space-between;
+
+    @media (min-width: 768px) {
+      width: 768px;
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+    }
+
+    @media (min-width: 1200px) {
+      width: 1200px;
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
     }
   }
 
   &__link {
     height: 90px;
-    width: 170px;
+    width: 210px;
     border: 1px solid var(--grey);
+    margin-bottom: 30px;
     display: flex;
-    justify-content: center;  
     align-items: center;
     fill: var(--grey);
     transition: border-color var(--animtrans), fill var(--animtrans);
-    
+
     &:hover {
       fill: var(--blue);
       cursor: pointer;
       border-color: var(--blue);
       transition: border-color var(--animtrans), fill var(--animtrans);
     }
+
+    @media (min-width: 768px) {
+      height: 90px;
+      width: 226px;
+    }
+
+    @media (min-width: 1200px) {
+      height: 90px;
+      width: 170px;
+    }
   }
 }
-

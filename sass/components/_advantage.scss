@@ -1,20 +1,39 @@
 .advantage {
-
   &__container {
-    display: inherit;
+    display: block;
     @include container;
     align-items: inherit;
   }
-  
+
   &__list {
     margin-top: 94px;
     margin-bottom: 94px;
     display: flex;
+    flex-direction: column;
     justify-content: space-between;
+
+    @media (min-width: 768px) {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+    }
+
+    @media (min-width: 1200px) {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+    }
   }
-  
+
   &__item {
-    width: 270px;
+    width: 100%;
+    @media (min-width: 768px) {
+      width: 354px;
+    }
+
+    @media (min-width: 1200px) {
+      width: 270px;
+    }
   }
 
   &__iconwrapper {
@@ -24,26 +43,31 @@
     background-color: var(--light-grey);
     margin-bottom: 30px;
   }
-  
+
   &__icon {
     text-align: center;
     display: block;
     fill: var(--grey);
   }
-  
+
   &__subtitle {
     font-weight: 700;
     font-size: 14px;
-    line-height: 16px;
+    line-height: 1.17;
+    text-align: center;
     margin-bottom: 10px;
-    letter-spacing: 0.03em;;
+    letter-spacing: 0.03em;
+
+    @media (min-width: 768px) {
+      text-align: left;
+    }
   }
-  
+
   &__description {
     color: var(--grey);
     font-weight: 400;
     font-size: 14px;
     line-height: 24px;
-    letter-spacing: 0.03em;;
+    letter-spacing: 0.03em;
   }
 }
